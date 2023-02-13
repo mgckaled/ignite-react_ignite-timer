@@ -46,7 +46,7 @@
 
 Neste segundo módulo foi criado uma aplicação completa com roteamento e diversos conceitos do ecossistema React, como ContextAPI, useReducer, immer, Styled Components, formulários controlados (React Hook Form), e muito mais.
 
-Análises e comentários sobre o código [AQUI](/.github/docs/index.md).
+Análises e comentários sobre o código [AQUI](/.github/docs/@index.md).
 
 ## Layout
 
