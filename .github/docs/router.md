@@ -1,6 +1,6 @@
-# `Router.tsx`
+# Arquivo `Router.tsx`
 
-> Voltar para o [`index`](../index.md).
+> Voltar para o [`index`](./%40index.md).
 
 - `<Routes></Routes>` - componente que representa um contexto onde dever ser inseridos os componentes `<Route />` de cada rota.
 - parâmentro `path=""` de `<Route />` é utilizado para indicar o "endereço"

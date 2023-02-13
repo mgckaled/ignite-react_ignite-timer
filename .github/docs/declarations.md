@@ -1,6 +1,6 @@
 # Arquivos `src\@types`
 
-> Voltar para o [`index`](../index.md).
+> Voltar para o [`index`](./%40index.md).
 
 ## `styled.d.ts`
 

@@ -1,6 +1,6 @@
 # Arquivos `src\styles`
 
-> Voltar para o [`index`](../index.md).
+> Voltar para o [`index`](./%40index.md).
 
 ## `themes\default.ts`
 
