@@ -9,3 +9,5 @@ O objetivo deste componente é utlizar o layout do componente _Header_ como padr
 - `<Outlet />` - deve ser usado em elementos de rota pai para renderizar seus elementos de rota filho. Isso permite que a interface do usuário aninhada apareça quando as rotas filhas são renderizadas. Se a rota pai corresponder exatamente, ela renderizará uma rota de índice filho ou nada se não houver rota de índice. Vai substituir a página definida pelas rotas.
 
 ## `styles.ts`
+
+`height: calc(100vh - 10rem)` - 100% do _viewport high_ com `5rem` de espaço em cima em baixo
