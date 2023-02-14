@@ -21,3 +21,5 @@ const StyledInput = styled(BaseInput)`
   padding: 10px;
 `;
 ```
+
+- `&::-webkit-calendar-picker-indicator {display: none !important;}` - retirar a seta do formulário de nomeação de tarefa.
