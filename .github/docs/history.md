@@ -5,3 +5,8 @@
 ## `index.tsx`
 
 ## `styles.ts`
+
+- A propriedade CSS `border-collapse: collapse` é usada para mesclar os limites (bordas) de células de uma tabela, para que elas sejam exibidas como uma única borda ao invés de várias bordas separadas. Isso resulta em uma aparência mais limpa e organizada da tabela. Além disso, a mesclagem de bordas pode ajudar a economizar espaço na página, pois a largura da borda é compartilhada entre as células adjacentes. O valor `collapse` é o valor padrão para a propriedade `border-collapse`, o que significa que as bordas das células são mescladas por padrão, a menos que a propriedade seja definida como `separate`.
+- `border-radius: 9999px;` - cria uma forma de círculo para o elemento, pois o valor 9999px é grande o suficiente para tornar os cantos do elemento muito arredondados.
+- `as const` ao final da constante confere a constante a exclusividade dos mapeamento das cores.
+- `statusColor: keyof typeof STATUS_COLORS` - as cores disponíveis são as "keys" do objeto `STATUS_COLORS`. O operador `typeof` em Typescript é usado para obter o tipo de uma variável ou expressão em tempo de compilação, permitindo que os programadores escrevam código mais seguro e confiável.
