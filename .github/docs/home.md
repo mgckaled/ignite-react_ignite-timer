@@ -12,6 +12,7 @@
 - `zod.object` - a validação de dados é feita a partir de um objeto, dado que a função `register()` do React Hook Form transforma os dados de tarefas e minutos para um objeto.
 - `defaultValues: {task: '',minutesAmount: 0,},` - definição de valores inicias para dentro do resolver
 - `type NewCycleFormData = zod.infer<typeof newCycleFormValidationSchema>` - inferência de tipagem _generic_ para dentro do _schema validation_: um objeto com dados do tipo `string` e `number`. O `typeof` referência uma variável de javascript para dentro da inferência.
+- `reset` - função do React Hook Form que reseta os valores dos formulário para os valores de `defaultValues` dentro do _resolver_.
 
 ## `styles.ts`
 
