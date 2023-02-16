@@ -13,6 +13,11 @@
 - `defaultValues: {task: '',minutesAmount: 0,},` - definição de valores inicias para dentro do resolver
 - `type NewCycleFormData = zod.infer<typeof newCycleFormValidationSchema>` - inferência de tipagem _generic_ para dentro do _schema validation_: um objeto com dados do tipo `string` e `number`. O `typeof` referência uma variável de javascript para dentro da inferência.
 - `reset` - função do React Hook Form que reseta os valores dos formulário para os valores de `defaultValues` dentro do _resolver_.
+- `useState<Cycle[]>([])` - é importante iniciar um estado com o mesmo tipo de dados que será armazenado.
+- `const id = String(new Date().getTime())` - estratégia de criação de id para impedir repetição de id. O método `getTime()` retorna um número em milisegundos, que depois será transformado em uma `string`.
+- `setCycles((state) => [...state, newCycle])` - o valor de estado é configurado no formato de uma função. Pega-se o estado atual dentro de uma variável de ciclos, de forma que a lista anterior de ciclo seja sobreposta pelo total de ciclos atual.
+- `setActiveCycleId(id)` - definição do ciclo mais recente como o ciclo ativo.
+- `const activeCycle = cycles.find((cycle) => cycle.id === activeCycleId)` - percorre o vetor de clicos e retorna o id do ciclo ativo.
 
 ## `styles.ts`
 
