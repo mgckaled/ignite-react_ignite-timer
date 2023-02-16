@@ -10,6 +10,8 @@
 - `import { zodResolver } from '@hookform/resolvers/zod'` - integração de React Hook Form com módulo de validação de dados. Há uma integração específicar com o módulo _zod_.
 - `resolver: zodResolver(newCycleFormValidationSchema)` = forma de se passar um schema de validação dentro do hook form.
 - `zod.object` - a validação de dados é feita a partir de um objeto, dado que a função `register()` do React Hook Form transforma os dados de tarefas e minutos para um objeto.
+- `defaultValues: {task: '',minutesAmount: 0,},` - definição de valores inicias para dentro do resolver
+- `type NewCycleFormData = zod.infer<typeof newCycleFormValidationSchema>` - inferência de tipagem _generic_ para dentro do _schema validation_: um objeto com dados do tipo `string` e `number`. O `typeof` referência uma variável de javascript para dentro da inferência.
 
 ## `styles.ts`
 
