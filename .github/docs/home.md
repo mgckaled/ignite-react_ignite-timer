@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD010 -->
+
 # Page Home
 
 > Voltar para o [`index`](./%40index.md).
@@ -9,7 +11,7 @@
 - `{...register('task')}` e `{...register('minutesAmount', { valueAsNumber: true })}` - forma de se passar o hook form para dentro dos inputs do formulário.
 - `import { zodResolver } from '@hookform/resolvers/zod'` - integração de React Hook Form com módulo de validação de dados. Há uma integração específicar com o módulo _zod_.
 - `resolver: zodResolver(newCycleFormValidationSchema)` = forma de se passar um schema de validação dentro do hook form.
-- `zod.object` - a validação de dados é feita a partir de um objeto, dado que a função `register()` do React Hook Form transforma os dados de tarefas e minutos para um objeto.
+- `zod.object` - a validação de dados é feita a partir de um objeto, dado que a função `register()` do React Hook Form transforma os dados de tarefas e minutos para dentro um objeto.
 - `defaultValues: {task: '',minutesAmount: 0,},` - definição de valores inicias para dentro do resolver
 - `type NewCycleFormData = zod.infer<typeof newCycleFormValidationSchema>` - inferência de tipagem _generic_ para dentro do _schema validation_: um objeto com dados do tipo `string` e `number`. O `typeof` referência uma variável de javascript para dentro da inferência.
 - `reset` - função do React Hook Form que reseta os valores dos formulário para os valores de `defaultValues` dentro do _resolver_.
@@ -21,6 +23,19 @@
 - `Math.floor(currentSeconds / 60)` - arrendondar número "cheio" para baixo
 - `currentSeconds % 60` - operador de resto. Quando segundos sobram e que não caibam dentro de uma divisão exata.
 - O método `padStart()` em JavaScript é usado para preencher uma string com um determinado caractere, até que a string atinja um comprimento especificado. Ele é usado para formatar a string para um comprimento fixo, adicionando caracteres de preenchimento no início da string, se necessário. O objetivo do método `padStart()` é garantir que uma string tenha um comprimento mínimo especificado e que seja preenchida com um caractere específico no início da string, se necessário. Isso é útil em situações em que é importante que a string tenha um comprimento fixo, como ao formatar dados de entrada em uma tabela ou ao exibir valores numéricos com um número fixo de dígitos. O método `padStart()` é particularmente útil em situações em que o comprimento da string pode variar, mas é importante manter uma formatação consistente. Ele pode ajudar a tornar o código mais legível e a garantir que as saídas estejam formatadas corretamente.
+- `useEffect()` -> Side-effect(efeito colateral). O `useEffect()` é um hook do React que permite executar código em resposta a mudanças em componentes ou em eventos no ciclo de vida de um componente. O propósito do `useEffect` é permitir que o desenvolvedor especifique como um componente deve responder a mudanças em seu estado ou nas propriedades recebidas, ou como ele deve reagir a eventos externos, como requisições assíncronas, timers ou atualizações no navegador. Com o `useEffect`, é possível definir o comportamento de um componente de forma declarativa, sem se preocupar com os detalhes de implementação. Ao usar o `useEffect`, o desenvolvedor pode definir o código que deve ser executado em resposta a uma ou mais dependências. Essas dependências podem ser definidas como um array de valores que o `useEffect` deve observar. Quando alguma das dependências mudar, o código dentro do `useEffect` é executado. Isso é particularmente útil para operações que exigem comunicação assíncrona com a API, manipulação do DOM, gerenciamento de eventos ou outras operações que podem afetar o estado do componente. O useEffect pode ser usado para muitas coisas, como atualizar o estado, disparar efeitos visuais, atualizar o DOM, definir ou remover eventos, entre outras coisas. Ele é uma ferramenta muito útil para garantir que a lógica de um componente esteja sempre atualizada e respondendo adequadamente às mudanças em seu estado ou nas propriedades recebidas.
+- `Date` como tipagem no Typescript representa data e horário.
+- Traduzindo a expressão abaixo: se o ciclo de contagem de tempo estiver ativo, o método `setAmountSecondsPassed()` monitorado pelo `useState()`, o método `differenceInSeconds()` compara a diferença do tempo atual com o tempo de quando o ciclo foi iniciado. E cada vez que a variável `activeCycle` mudar, a contagem de tempo será reiniciada.
+
+```ts
+useEffect(() => {
+	if (activeCycle) {
+		setInterval(() => {
+			setAmountSecondsPassed(differenceInSeconds(new Date(), activeCycle.startDate))
+		}, 1000)
+	}
+}, [activeCycle])
+```
 
 ## `styles.ts`
 
