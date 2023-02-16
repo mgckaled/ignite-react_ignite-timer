@@ -6,6 +6,10 @@
 
 - A tag `<label>` em HTML tem como propósito fornecer uma descrição associada a um elemento de formulário, como um campo de texto, caixa de seleção ou botão de rádio. A tag `<label>` é usada para ajudar a descrever o propósito de um elemento de formulário para os usuários, especialmente aqueles com necessidades de acessibilidade, como pessoas com baixa visão ou cegas que usam leitor de tela. Ao colocar um rótulo no formulário, você pode fornecer informações adicionais sobre o que o usuário deve inserir ou selecionar, sem a necessidade de explicar isso em outro lugar na página. Isso pode ajudar a tornar o formulário mais fácil de preencher e mais acessível para todos os usuários. Você pode colocar um elemento de formulário dentro da tag `<label>`, usando o atributo "for" na tag `<label>` para vincular o elemento de formulário ao rótulo. Isso permite que os usuários cliquem no rótulo para selecionar o elemento de formulário associado. Além disso, o rótulo também pode ser estilizado usando CSS, para destacar a descrição do elemento de formulário.
 - `<TaskInput />` e `<MinutesAmountInput />` são componentes que carregam todas as propriedades da tag HTML `<input>`. Foram definidas com o uso da função `styles()`.
+- `{...register('task')}` e `{...register('minutesAmount', { valueAsNumber: true })}` - forma de se passar o hook form para dentro dos inputs do formulário.
+- `import { zodResolver } from '@hookform/resolvers/zod'` - integração de React Hook Form com módulo de validação de dados. Há uma integração específicar com o módulo _zod_.
+- `resolver: zodResolver(newCycleFormValidationSchema)` = forma de se passar um schema de validação dentro do hook form.
+- `zod.object` - a validação de dados é feita a partir de um objeto, dado que a função `register()` do React Hook Form transforma os dados de tarefas e minutos para um objeto.
 
 ## `styles.ts`
 
