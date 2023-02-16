@@ -18,6 +18,9 @@
 - `setCycles((state) => [...state, newCycle])` - o valor de estado é configurado no formato de uma função. Pega-se o estado atual dentro de uma variável de ciclos, de forma que a lista anterior de ciclo seja sobreposta pelo total de ciclos atual.
 - `setActiveCycleId(id)` - definição do ciclo mais recente como o ciclo ativo.
 - `const activeCycle = cycles.find((cycle) => cycle.id === activeCycleId)` - percorre o vetor de clicos e retorna o id do ciclo ativo.
+- `Math.floor(currentSeconds / 60)` - arrendondar número "cheio" para baixo
+- `currentSeconds % 60` - operador de resto. Quando segundos sobram e que não caibam dentro de uma divisão exata.
+- O método `padStart()` em JavaScript é usado para preencher uma string com um determinado caractere, até que a string atinja um comprimento especificado. Ele é usado para formatar a string para um comprimento fixo, adicionando caracteres de preenchimento no início da string, se necessário. O objetivo do método `padStart()` é garantir que uma string tenha um comprimento mínimo especificado e que seja preenchida com um caractere específico no início da string, se necessário. Isso é útil em situações em que é importante que a string tenha um comprimento fixo, como ao formatar dados de entrada em uma tabela ou ao exibir valores numéricos com um número fixo de dígitos. O método `padStart()` é particularmente útil em situações em que o comprimento da string pode variar, mas é importante manter uma formatação consistente. Ele pode ajudar a tornar o código mais legível e a garantir que as saídas estejam formatadas corretamente.
 
 ## `styles.ts`
 
