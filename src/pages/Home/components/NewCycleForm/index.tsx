@@ -1,6 +1,7 @@
 import { useContext } from 'react'
 import { useFormContext } from 'react-hook-form'
-import { CyclesContext } from '../..'
+
+import { CyclesContext } from '../../../../contexts/CyclesContext'
 
 import { FormContainer, MinutesAmountInput, TaskInput } from './styles'
 
@@ -23,7 +24,6 @@ export function NewCycleForm() {
 				<option value="Projeto 1" />
 				<option value="Projeto 2" />
 				<option value="Projeto 3" />
-				<option value="Banana" />
 			</datalist>
 
 			<label htmlFor="minutesAmount">durante</label>
