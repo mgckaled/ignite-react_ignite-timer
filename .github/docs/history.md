@@ -6,6 +6,7 @@
 
 - `<tr key={cycle.id}>` - key na primeira tag do método `map()` baseado no timestamp em milisegundos.
 - Em TypeScript, o operador `&&` é usado para avaliar uma expressão lógica condicional. Ele é conhecido como "operador de curto-circuito" porque, se a primeira expressão na operação `&&` é avaliada como falsa, a segunda expressão não é avaliada. Se a primeira expressão é avaliada como verdadeira, então a segunda expressão é avaliada e o resultado final é o valor da segunda expressão. Esse operador foi utilizado para considerar as possibilidades de status do ciclo.
+- `{formatDistanceToNow(cycle.startDate, {addSuffix: true,locale: ptBR,})}` - forma de demosntrar o tempo que passou em relação a data de criação do ciclo.
 
 ## `styles.ts`
 
