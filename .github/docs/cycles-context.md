@@ -15,6 +15,9 @@
 - Em React, o tipo `ReactNode` é usado para representar qualquer tipo de conteúdo que pode ser renderizado como um nó na árvore de componentes do React. Isso inclui elementos JSX, strings, números, arrays de elementos JSX ou strings, e até mesmo `null` ou `undefined`.
 - `const activeCycle = cycles.find((cycle) => cycle.id === activeCycleId)` - percorre o vetor de clicos e retorna o id do ciclo ativo.
 - O `useReducer` é um hook do React que é usado para gerenciar estados complexos em um componente. Ele é uma alternativa ao `useState` para lidar com situações em que o estado do componente possui múltiplos valores relacionados. O `useReducer` segue o padrão do reducer da programação funcional, em que um estado atual é atualizado com base em uma ação, resultando em um novo estado. Ele recebe dois argumentos: um estado inicial e uma função de redução. A função de redução recebe dois argumentos: o estado atual e a ação a ser executada. A função de redução retorna um novo estado com base na ação fornecida.
-- `useReducer((state: Cycle[], action: any)` - é importante definir o estado do reducer como um ciclo, pois esse será a "entidade" momitorada pelo React e a que sofrerá as ações.
+- `useReducer((state: CyclesState, action: any)` - é importante definir o estado do reducer como um ciclo, pois esse será a "entidade" momitorada pelo React e a que sofrerá as ações.
 - É muito comum que dentro do `dispatch()` seja enviado um objeto com os parâmetros `type` dando o nome da ação a ser realizada, e o `payload`, com os dados do novo ciclo. São recomendações da própria comunidade.
-- `if (action.type === 'ADD_NEW_CYCLE') {return [...state, action.payload.newCycle]}` - transcrevendo: se a ação do reducer for 'criar novo ciclo', será retornado todos os estados já monitorado pelo React mais o novo ciclo que foi adicionado.
+- `if (action.type === 'ADD_NEW_CYCLE') {}` - transcrevendo: se a ação do reducer for 'criar novo ciclo', será retornado todos os estados já monitorado pelo React mais o novo ciclo que foi adicionado.
+- `interface CyclesState` - a interface com as informações dos estados do ciclo.
+- `if (action.type === 'INTERRUPT_CURRENT_CYCLE') {}` - cria-se uma data de interrupção para cada ciclo com o uso do método `map()`.
+- `const { cycles, activeCycleId } = cyclesState` - desestruturações para o acesso dos dados do `useReducer()`.
